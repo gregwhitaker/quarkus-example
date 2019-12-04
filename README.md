@@ -1,5 +1,26 @@
 # quarkus-example
-Simple example of a web service implemented with Quarkus.
+Simple example of a web service implemented with [Quarkus](http://quarkus.io).
+
+## Prerequisites
+This example requires that you have the [GraalVM installed](https://www.graalvm.org/docs/getting-started/#install-graalvm) on your development machine.
+
+## Building the Example
+Run the following command to build example:
+
+    ./gradlew clean build
+    
+This will build the example as both an executable JAR and a native image using GraalVM.
+
+## Running the Example
+Follow the steps below to run the example application:
+
+1. Run the following command to start the native image version of the application:
+
+2. In a new terminal, run the following command to send an HTTP request to the service:
+
+        curl http://localhost:8080/hello?name=Bob
+    
+    If successful, you will see the following response in the terminal:
 
 ## License
 MIT License
