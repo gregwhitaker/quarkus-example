@@ -1,0 +1,53 @@
+// this block is necessary to make enforcedPlatform work for Quarkus plugin available
+// only locally (snapshot) that is also importing the Quarkus BOM
+buildscript {
+    ext {
+        quarkusPluginVersion = '1.0.1.Final'
+    }
+
+    repositories {
+        mavenLocal()
+    }
+
+    dependencies {
+        classpath "io.quarkus:quarkus-gradle-plugin:${quarkusPluginVersion}"
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin: 'io.quarkus'
+
+ext {
+    quarkusPlatformArtifactId = 'quarkus-universe-bom'
+    quarkusPlatformVersion = '1.0.1.Final'
+    quarkusPlatformGroupId = 'io.quarkus'
+}
+
+group = 'com.github.gregwhitaker'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+     mavenLocal()
+     mavenCentral()
+}
+
+dependencies {
+    implementation 'io.quarkus:quarkus-jackson'
+    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    implementation 'io.quarkus:quarkus-resteasy'
+
+    testImplementation 'io.quarkus:quarkus-junit5'
+    testImplementation 'io.rest-assured:rest-assured'
+
+    nativeTestImplementation 'io.quarkus:quarkus-junit5'
+    nativeTestImplementation 'io.rest-assured:rest-assured'
+}
+
+compileJava {
+    options.compilerArgs << '-parameters'
+}
