@@ -10,10 +10,10 @@ This example requires that you have the [GraalVM installed](https://www.graalvm.
 Run the following command to build example:
 
     ./gradlew clean build
-    
-For more detailed information check out the [Building Quarkus Apps with Gradle](https://quarkus.io/guides/gradle-tooling) documentation on the Quarkus website.
-    
+        
 This will build the example as both an executable JAR and a native image using GraalVM.
+
+For more detailed information check out the [Building Quarkus Apps with Gradle](https://quarkus.io/guides/gradle-tooling) documentation on the Quarkus website.
 
 ## Running the Example
 Follow the steps below to run the example application:
