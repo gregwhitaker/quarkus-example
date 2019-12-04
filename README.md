@@ -36,7 +36,10 @@ Follow the steps below to run the example application:
     If successful, you will see a response similar to the following in the terminal:
     
         {"create_time":"2019-12-04 03:24:56","message":"Hello, Bob!"}
-    
+
+## Bugs and Feedback
+For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/quarkus-example/issues).
+
 ## License
 MIT License
 
