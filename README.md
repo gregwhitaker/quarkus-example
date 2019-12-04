@@ -18,14 +18,25 @@ For more detailed information check out the [Building Quarkus Apps with Gradle](
 ## Running the Example
 Follow the steps below to run the example application:
 
-1. Run the following command to start the native image version of the application:
+1. Run the following commands to start the native image version of the application:
+
+        cd build
+        ./quarkus-example-0.1.0-runner
+        
+    If successful, you will see the following in the terminal:
+    
+        2019-12-04 15:23:59,587 INFO  [io.quarkus] (main) quarkus-example 0.1.0 (running on Quarkus 1.0.1.Final) started in 0.009s. Listening on: http://0.0.0.0:8080
+        2019-12-04 15:23:59,587 INFO  [io.quarkus] (main) Profile prod activated.
+        2019-12-04 15:23:59,587 INFO  [io.quarkus] (main) Installed features: [cdi, resteasy, resteasy-jackson]
 
 2. In a new terminal, run the following command to send an HTTP request to the service:
 
         curl http://localhost:8080/hello?name=Bob
     
-    If successful, you will see the following response in the terminal:
-
+    If successful, you will see a response similar to the following in the terminal:
+    
+        {"create_time":"2019-12-04 03:24:56","message":"Hello, Bob!"}
+    
 ## License
 MIT License
 

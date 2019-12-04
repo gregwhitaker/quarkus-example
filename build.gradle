@@ -28,7 +28,7 @@ ext {
 }
 
 group = 'com.github.gregwhitaker'
-version = '1.0.0-SNAPSHOT'
+version = '0.1.0'
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
@@ -60,6 +60,7 @@ compileJava {
 }
 
 buildNative {
+
     enableJni = true
     enableAllSecurityServices = true
 }

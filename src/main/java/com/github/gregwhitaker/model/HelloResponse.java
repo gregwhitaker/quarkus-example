@@ -8,7 +8,7 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
 // is returned from a method, but the return type of that method is not this object. So in the case of this response object
 // we are returning a javax.ws.rs.core.Response object with this as the body. If you do not annotated this method for reflection
 // the response body will always return empty.
-@RegisterForReflection  
+@RegisterForReflection
 @JsonPropertyOrder({
         "createTime",
         "message"
