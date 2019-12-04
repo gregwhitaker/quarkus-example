@@ -24,7 +24,7 @@ public class HelloResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response hello(@DefaultValue("You") @QueryParam("name") String name) {
-        LOG.debug("Received hello request for: {}", name);
+        LOG.info("Received hello request for: {}", name);
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 

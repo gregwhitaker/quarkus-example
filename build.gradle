@@ -58,3 +58,8 @@ dependencies {
 compileJava {
     options.compilerArgs << '-parameters'
 }
+
+buildNative {
+    enableJni = true
+    enableAllSecurityServices = true
+}
