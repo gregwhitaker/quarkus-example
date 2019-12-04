@@ -4,7 +4,10 @@ Simple example of a web service implemented with [Quarkus](http://quarkus.io).
 This example shows you how to build and compile a simple "Hello World" RESTful webservice using Quarkus, GraalVM, and Gradle.
 
 ## Prerequisites
-This example requires that you have the [GraalVM installed](https://www.graalvm.org/docs/getting-started/#install-graalvm) on your development machine.
+This example requires that you have the [GraalVM installed](https://github.com/oracle/graal/releases/tag/vm-19.2.1) on your development machine. 
+
+**Note:** As of the time of this example Quarkus only supports GraalVM version `19.2.1`. Please refer to the [Quarkus](http://quarkus.io) website for information
+on current GraalVM compatibility.
 
 ## Building the Example
 Run the following command to build example:
