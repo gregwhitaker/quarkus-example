@@ -1,4 +1,6 @@
 # quarkus-example
+![Build](https://github.com/gregwhitaker/quarkus-example/workflows/Build/badge.svg)
+
 Simple example of a web service implemented with [Quarkus](http://quarkus.io).
 
 This example shows you how to build and compile a simple "Hello World" RESTful webservice using Quarkus, GraalVM, and Gradle.
